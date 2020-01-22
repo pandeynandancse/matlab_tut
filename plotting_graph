@@ -1,0 +1,87 @@
+figure
+subplot(2,1,1)
+plot(x,A,'--',x,B,':',x,Csum,'c')
+title('Fuzzy Addition, A+B')
+legend('A','B','A+B')
+subplot(2,1,2)
+plot(x,A,'--',x,B,':',x,Csub,'c')
+title('Fuzzy Subtraction, A-B')
+legend('A','B','A-B')
+
+
+
+
+subplot(2,2,1)
+x = linspace(0,10);
+y1 = sin(x);
+plot(x,y1)
+title('Subplot 1: sin(x)')
+
+subplot(2,2,2)
+y2 = sin(2*x);
+plot(x,y2)
+title('Subplot 2: sin(2x)')
+
+subplot(2,2,3)
+y3 = sin(4*x);
+plot(x,y3)
+title('Subplot 3: sin(4x)')
+
+subplot(2,2,4)
+y4 = sin(8*x);
+plot(x,y4)
+title('Subplot 4: sin(8x)')
+
+
+
+
+
+
+for k = 1:4
+    data = rand(1,10);
+    subplot(2,2,k)
+    stem(data)
+end
+
+
+
+
+
+
+x = linspace(0,10);
+y1 = sin(x);
+bar(y)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ax1 = subplot(2,1,1);
+Z = peaks;
+plot(ax1,Z(1:20,:))
+
+ax2 = subplot(2,1,2);  
+plot(ax2,Z)
+ax1.FontSize = 15;
+ax2.LineWidth = 2;
+
+
+
+
+
+
+
+
+
+axis([0 50 -1 1])
+
+

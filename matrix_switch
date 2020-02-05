@@ -1,0 +1,111 @@
+   pro = "enter Number of rows"
+x =input(pro)
+pro2 = "enter number of columns"
+y = input(pro2)
+H = zeros(x,y);
+H4 = zeros(x,y);
+H5 = zeros(x,y);
+H6 = zeros(x,y);
+H7 = zeros(x,y);
+for i = 1:x
+    for j = 1:y
+        H(i,j) = input("Value");
+    end
+    disp("Another row");
+end
+disp(H)
+
+disp("Another matrix");
+
+pro3 = "enter Number of rows"
+x2 =input(pro3)
+pro4 = "enter number of columns"
+y2 = input(pro4)
+H2= zeros(x2,y2);
+for i = 1:x2
+    for j = 1:y2
+        H2(i,j) = input("Value");
+    end
+    disp("Another row");
+end
+disp(H2)
+
+H3 = zeros(x2,y2);
+disp("Enter 1 for union of two given matrix\n");
+disp("Enter 2 for intersection of two given matrix\n");
+
+choice = input("Enter your choice\n");
+
+switch choice
+    case 1
+        for i = 1:x
+            for j = 1:y
+                H3(i,j) =  max(H(i,j),H2(i,j))
+            end
+        end
+        break
+        
+    case 2
+        for i = 1:x
+            for j = 1:y
+                H3(i,j) =  min(H(i,j),H2(i,j))
+            end
+        end
+        break
+        
+    case 3 
+        disp("H4 = Printing complement of array H")
+        for i = 1:x
+            for j = 1:y
+                H4(i,j) = 1 - H(i,j)
+            end
+        end
+        
+        disp("H5 = Printing complement of array H2")
+        for i = 1:x
+            for j = 1:y
+                H5(i,j) = 1 - H2(i,j)
+            end
+        end
+    
+    case 4
+       disp("Algebric sum: ")
+       for i = 1:x
+           for j = 1:y
+               H6(i,j) = (H(i,j) + H2(i,j)) - (H(i,j) * H2(i,j)) 
+           end
+       end
+       
+       
+   case 5 
+       disp("Algevric product")
+       for i = 1:x
+           for j = 1:y
+               H7(i,j) = H(i,j) * H2(i,j)
+           end
+       end
+       
+       
+   case 6 
+      disp("Bounded sum")
+      for i = 1:x
+           for j = 1:y
+               H8(i,j) = min(1,(H(i,j) + H2(i,j)))
+           end
+       end
+       
+       
+       
+   case 7 
+       disp("Bounded difference")
+      for i = 1:x
+           for j = 1:y
+               H8(i,j) = min(0,(H(i,j) - H2(i,j)))
+           end
+       end
+   otherwise
+       disp("Choice is invalid")
+       
+end
+
+disp(H3)

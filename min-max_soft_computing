@@ -33,13 +33,15 @@ end
 %disp(H2)
 
 H3 = zeros(x2,y2);
-
+H5 = zeros(x,y2);    % for storing max product composition elements
 
 
 disp("Enter 1 for union of two given matrix\n");
 disp("Enter 2 for intersection of two given matrix\n");
 disp("Enter 3 for max-min composition");
 disp("Enter 4 for min-max composition");
+disp("Enter 5 for max product composition");
+
 choice = input("Enter your choice\n");
 
 switch choice
@@ -92,6 +94,24 @@ switch choice
            end
        end
        break
+       
+       
+       
+     case 5
+       disp("Printing max product composition");
+       for i = 1:x
+           for j=1:y2
+               li=[]
+               k = 1
+               while k<=x
+                   li = [li  H(i,k)*H2(k,j)] 
+                   k++
+               H5(i,j) = max(li)
+               end
+           end
+       end
+       break
+       
        
    otherwise
        disp("Choice is invalid")

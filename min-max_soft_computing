@@ -1,7 +1,8 @@
 % comment
 % appending items in list
 % while loop
-
+%min max compositon
+% max min composition
 
 pro = "enter Number of rows"
 x =input(pro)

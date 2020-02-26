@@ -1,5 +1,5 @@
 concept of xlabe, ylabel,subscript,superscript, new line, title, x-axis limit, y-axis limit, plotting via line,
-conversion from number to string, merge two line plot in one figure , subplot . 
+conversion from number to string, merge two line plot in one figure , subplot ,legend. 
 
 
 
@@ -20,7 +20,7 @@ xlabel(['plotting in year n_{year} ',num2str(year)])
 ylabel('M.F. value')
 xlim([0,40])
 ylim([0,1.2])
-
+legend(' red plot', 'blue plot')
 
 subplot(3,1,2);
 x=[-50, 0, 50];
@@ -38,6 +38,9 @@ xlabel('input variable Realtive Velocity ')
 ylabel('M.F. value')
 xlim([-50,50])
 ylim([0,1.2])
+legend(' red plot', 'blue plot')
+
+
 subplot(3,1,3);
 x=[0,50,70,120];
 y=[1,0,0,1];
@@ -55,3 +58,4 @@ xlabel('input variable Realtive Velocity ')
 ylabel('M.F. value')
 xlim([0,120])
 ylim([0,1.2])
+legend(' red plot', 'blue plot')

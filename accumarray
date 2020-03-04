@@ -1,0 +1,114 @@
+
+val = [100.1 101.2 103.4 102.8 100.9 101.5]';
+subs = [1 1; 1 1; 2 2; 3 2; 2 2; 3 2]
+A1 = accumarray(subs,val,[],@var)
+A1 = accumarray(subs,val,[],@sum)
+\\A1 = 3×2
+
+    0.6050         0
+         0    3.1250
+         0    0.8450
+
+\\\\
+
+
+
+val = int8(10:15);
+subs = [1 1 1; 1 1 1; 1 1 2; 1 1 2; 2 3 1; 2 3 2]
+A = accumarray(subs,val,[],@(x) sum(x,'native'))
+
+\\\A = 2x3x2 int8 array
+A(:,:,1) =
+
+   21    0    0
+    0    0   14
+
+
+A(:,:,2) =
+
+   25    0    0
+    0    0   15
+\\\
+
+   
+   
+   sum(single([2 5 8]});
+    class(ans)
+
+   \\\\ ans =
+
+    single
+\\\\
+If you want MATLAB to perform additions on an integer data type in the same integer type as the input, use the syntax
+
+    sum(int8([2 5 8], 'native');
+    class(ans)
+
+    \\\ans =
+
+    int8
+\\\\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+val = 1:10;
+subs = [1 1;1 1;1 1;1 1;2 1;2 1;2 1;2 1;2 1;2 2]
+A = accumarray(subs,val,[],@(x) {x})
+////
+A=2×2 cell
+    {4x1 double}    {0x0 double}
+    {5x1 double}    {[      10]}
+\\\\\\
+A{2,1}
+\\\
+5
+     6
+     7
+     8
+     9\\\
+     
+     
+     
+     
+     
+     
+ 
+ 
+ val = 101:106';
+subs = [1 1; 2 2; 3 3; 1 1; 2 2; 4 4]
+A = accumarray(subs,val,[],[],NaN)
+
+\\\\A = 4×4
+
+   205   NaN   NaN   NaN
+   NaN   207   NaN   NaN
+   NaN   NaN   103   NaN
+   NaN   NaN   NaN   106
+
+\\\\
+
+
+
+
+
+val = [34 22 19 85 53 77 99 6];
+subs = [1 1; 400 400; 80 80; 1 1; 400 400; 400 400; 80 80; 1 1]
+A = accumarray(subs,val,[],[],[],true)
+\\\
+A = 
+   (1,1)      125
+  (80,80)     118
+ (400,400)    152
+\\\\\

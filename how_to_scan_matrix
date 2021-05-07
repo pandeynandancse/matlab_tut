@@ -1,14 +1,13 @@
+%program for scanning two arrays
+
 
 pro = "enter Number of rows"
 x =input(pro)
 
-
 pro2 = "enter number of columns"
 y = input(pro2)
 
-
 H = zeros(x,y);
-
 
 for i = 1:x
     for j = 1:y
@@ -20,9 +19,13 @@ disp(H)
 
 
 
+
+
+
+
+
+
 disp("Another matrix");
-
-
 
 pro3 = "enter Number of rows"
 x2 =input(pro3)
